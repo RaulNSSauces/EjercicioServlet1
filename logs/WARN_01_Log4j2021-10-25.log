@@ -1,0 +1,108 @@
+[2021-10-25 09:40:45] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 09:41:29] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 09:42:32] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 09:43:15] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 09:44:51] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 09:45:19] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1364, SQLState: HY000
+[2021-10-25 09:45:19] [ ERROR] [SqlExceptionHelper:142] Field 'codigo' doesn't have a default value
+[2021-10-25 09:51:08] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 09:51:42] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1364, SQLState: HY000
+[2021-10-25 09:51:42] [ ERROR] [SqlExceptionHelper:142] Field 'codigo' doesn't have a default value
+[2021-10-25 09:55:00] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 09:55:30] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1364, SQLState: HY000
+[2021-10-25 09:55:30] [ ERROR] [SqlExceptionHelper:142] Field 'codigo' doesn't have a default value
+[2021-10-25 09:56:36] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 09:58:17] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:02:29] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:03:26] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:03:57] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:05:38] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:09:24] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:10:32] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1062, SQLState: 23000
+[2021-10-25 10:10:32] [ ERROR] [SqlExceptionHelper:142] Duplicate entry '2' for key 'PRIMARY'
+[2021-10-25 10:10:47] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:13:24] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:14:31] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:15:03] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1406, SQLState: 22001
+[2021-10-25 10:15:03] [ ERROR] [SqlExceptionHelper:142] Data truncation: Data too long for column 'fecha_nacimiento' at row 1
+[2021-10-25 10:16:45] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:19:59] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:21:29] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:22:39] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:49:20] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:50:26] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:50:46] [ ERROR] [ErrorTracker:62] line 1:8: unexpected token: from
+[2021-10-25 10:50:46] [ ERROR] [ErrorTracker:57] line 1:8: unexpected token: from
+line 1:8: unexpected token: from
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectClause(HqlBaseParser.java:1263)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1040)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:748)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:319)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:198)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:290)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:155)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:600)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:709)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:809)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:109)
+	at maven.ejercicioHibernate.dao.EmpleadoDAOClase.getEmpleado(EmpleadoDAOClase.java:47)
+	at maven.ejercicioHibernate.Principal.main(Principal.java:201)
+[2021-10-25 10:55:04] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 10:55:08] [ ERROR] [ErrorTracker:62] line 1:8: unexpected token: from
+[2021-10-25 10:55:08] [ ERROR] [ErrorTracker:57] line 1:8: unexpected token: from
+line 1:8: unexpected token: from
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectClause(HqlBaseParser.java:1263)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1040)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:748)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:319)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:198)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:290)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:155)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:600)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:709)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:809)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:109)
+	at maven.ejercicioHibernate.dao.EmpleadoDAOClase.getEmpleado(EmpleadoDAOClase.java:47)
+	at maven.ejercicioHibernate.Principal.main(Principal.java:201)
+[2021-10-25 11:00:15] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 11:00:43] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 11:00:47] [ ERROR] [ErrorTracker:62] line 1:8: unexpected token: from
+[2021-10-25 11:00:47] [ ERROR] [ErrorTracker:57] line 1:8: unexpected token: from
+line 1:8: unexpected token: from
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectClause(HqlBaseParser.java:1263)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1040)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:748)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:319)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:198)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:290)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:155)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:600)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:709)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:809)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:109)
+	at maven.ejercicioHibernate.dao.EmpleadoDAOClase.getEmpleado(EmpleadoDAOClase.java:47)
+	at maven.ejercicioHibernate.Principal.main(Principal.java:201)
+[2021-10-25 11:03:37] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 11:10:07] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 11:14:41] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 11:14:44] [ WARN ] [deprecation:1774] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[2021-10-25 11:15:15] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 11:15:20] [ WARN ] [deprecation:1774] HHH90000022: Hibernate's legacy org.hibernate.Criteria API is deprecated; use the JPA javax.persistence.criteria.CriteriaQuery instead
+[2021-10-25 11:17:05] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 11:25:32] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 11:26:47] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 11:27:06] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 11:49:00] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-25 21:20:32] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)

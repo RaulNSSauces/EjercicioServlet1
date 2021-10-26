@@ -1,0 +1,262 @@
+[2021-10-24 18:41:00] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 18:41:00] [ WARN ] [JdbcEnvironmentInitiator:132] HHH000342: Could not obtain connection to query metadata : Cannot invoke "org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PoolState.getConnection()" because "this.state" is null
+[2021-10-24 18:41:00] [ WARN ] [SqlExceptionHelper:137] SQL Error: 0, SQLState: 08S01
+[2021-10-24 18:41:00] [ ERROR] [SqlExceptionHelper:142] Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2021-10-24 18:41:00] [ ERROR] [HibernateUtil:30] HibernateUtil.buildSessionFactory(): Initial SessionFactory creation failed.
+org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:175)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:473)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:84)
+	at maven.ejercicioHibernate.utils.HibernateUtil.buildSessionFactory(HibernateUtil.java:25)
+	at maven.ejercicioHibernate.utils.HibernateUtil.<clinit>(HibernateUtil.java:16)
+	at maven.ejercicioHibernate.Principal.main(Principal.java:51)
+Caused by: org.hibernate.exception.JDBCConnectionException: Error calling Driver#connect
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:112)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:118)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:41)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:58)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:331)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:250)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:228)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:369)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:98)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:73)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:107)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:145)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 14 more
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:38)
+	... 29 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 33 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 36 more
+[2021-10-24 18:44:22] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 18:44:23] [ WARN ] [JdbcEnvironmentInitiator:132] HHH000342: Could not obtain connection to query metadata : Cannot invoke "org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PoolState.getConnection()" because "this.state" is null
+[2021-10-24 18:44:23] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1049, SQLState: 42000
+[2021-10-24 18:44:23] [ ERROR] [SqlExceptionHelper:142] Unknown database 'curso'
+[2021-10-24 18:44:23] [ ERROR] [HibernateUtil:30] HibernateUtil.buildSessionFactory(): Initial SessionFactory creation failed.
+org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:175)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:83)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:473)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:84)
+	at maven.ejercicioHibernate.utils.HibernateUtil.buildSessionFactory(HibernateUtil.java:25)
+	at maven.ejercicioHibernate.utils.HibernateUtil.<clinit>(HibernateUtil.java:16)
+	at maven.ejercicioHibernate.Principal.main(Principal.java:52)
+Caused by: org.hibernate.exception.SQLGrammarException: Error calling Driver#connect
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:118)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:41)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:58)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:331)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:250)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:228)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:369)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:98)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:73)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:107)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:145)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 14 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'curso'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:38)
+	... 29 more
+[2021-10-24 18:45:54] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 18:46:46] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 18:46:47] [ WARN ] [ExceptionHandlerLoggedImpl:27] GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table departamento (
+       codigo integer not null,
+        cod_responsable integer,
+        nombre varchar(255),
+        primary key (codigo)
+    ) type=MyISAM" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table departamento (
+       codigo integer not null,
+        cod_responsable integer,
+        nombre varchar(255),
+        primary key (codigo)
+    ) type=MyISAM" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:439)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:423)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:314)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:166)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:135)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:121)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:156)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:320)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462)
+	at maven.ejercicioHibernate.utils.HibernateUtil.buildSessionFactory(HibernateUtil.java:26)
+	at maven.ejercicioHibernate.utils.HibernateUtil.<clinit>(HibernateUtil.java:16)
+	at maven.ejercicioHibernate.Principal.main(Principal.java:52)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'type=MyISAM' at line 6
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:764)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 13 more
+[2021-10-24 18:47:46] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 18:49:22] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 19:14:36] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 19:35:35] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 19:47:07] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 19:52:44] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 19:54:26] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 19:56:49] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:03:20] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:03:41] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:04:09] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:04:26] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:04:45] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:05:33] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:05:58] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:06:14] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:06:47] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:07:16] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:07:27] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:31:50] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:33:03] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:33:22] [ ERROR] [ErrorTracker:62] line 1:57: expecting "set", found 'where'
+[2021-10-24 20:33:22] [ ERROR] [ErrorTracker:57] line 1:57: expecting "set", found 'where'
+line 1:57: expecting "set", found 'where'
+	at antlr.Parser.match(Parser.java:211)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.setClause(HqlBaseParser.java:460)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.updateStatement(HqlBaseParser.java:241)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:181)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:290)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:155)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:600)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:709)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:109)
+	at maven.ejercicioHibernate.dao.DepartamentoDAOClase.modificarDepartamento(DepartamentoDAOClase.java:44)
+	at maven.ejercicioHibernate.Principal.main(Principal.java:85)
+[2021-10-24 20:34:38] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 20:34:50] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1062, SQLState: 23000
+[2021-10-24 20:34:50] [ ERROR] [SqlExceptionHelper:142] Duplicate entry '3' for key 'PRIMARY'
+[2021-10-24 21:08:27] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 21:08:43] [ ERROR] [ErrorTracker:62] line 1:57: expecting "set", found 'where'
+[2021-10-24 21:08:43] [ ERROR] [ErrorTracker:57] line 1:57: expecting "set", found 'where'
+line 1:57: expecting "set", found 'where'
+	at antlr.Parser.match(Parser.java:211)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.setClause(HqlBaseParser.java:460)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.updateStatement(HqlBaseParser.java:241)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:181)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:290)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:155)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:600)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:709)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:109)
+	at maven.ejercicioHibernate.dao.DepartamentoDAOClase.modificarDepartamento(DepartamentoDAOClase.java:44)
+	at maven.ejercicioHibernate.Principal.main(Principal.java:85)
+[2021-10-24 21:11:52] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 21:12:05] [ ERROR] [ErrorTracker:62] line 1:81: unexpected token: and
+[2021-10-24 21:12:05] [ ERROR] [ErrorTracker:57] line 1:81: unexpected token: and
+line 1:81: unexpected token: and
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.updateStatement(HqlBaseParser.java:257)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:181)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:290)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:155)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:600)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:709)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:109)
+	at maven.ejercicioHibernate.dao.DepartamentoDAOClase.modificarDepartamento(DepartamentoDAOClase.java:44)
+	at maven.ejercicioHibernate.Principal.main(Principal.java:85)
+[2021-10-24 21:12:37] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 21:12:47] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1305, SQLState: 42000
+[2021-10-24 21:12:47] [ ERROR] [SqlExceptionHelper:142] FUNCTION d.getCodigo does not exist
+[2021-10-24 21:13:05] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 21:13:20] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1305, SQLState: 42000
+[2021-10-24 21:13:20] [ ERROR] [SqlExceptionHelper:142] FUNCTION d.getCodigo does not exist
+[2021-10-24 21:19:18] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 21:22:08] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 21:28:16] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-10-24 21:36:02] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
